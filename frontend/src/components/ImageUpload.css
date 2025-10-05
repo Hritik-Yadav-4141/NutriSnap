@@ -1,0 +1,90 @@
+/* src/components/ImageUpload.css */
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 550px;
+  margin: 1rem auto;
+}
+
+.upload-box {
+  width: 100%;
+  height: 300px;
+  border: 2px dashed #a5d6a7; /* CHANGED: Lighter green border */
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.upload-box:hover {
+  transform: translateY(-5px);
+  border-color: #4CAF50; /* CHANGED: Main green color */
+  box-shadow: 0 8px 30px rgba(76, 175, 80, 0.15); /* CHANGED: Green shadow */
+}
+
+.image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upload-placeholder {
+  text-align: center;
+  color: #6c757d;
+}
+
+.upload-placeholder p:first-child {
+  font-size: 3rem;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+.upload-box:hover .upload-placeholder p:first-child {
+  transform: scale(1.1);
+}
+
+.upload-placeholder p {
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+.upload-placeholder span {
+  font-size: 0.9rem;
+  color: #adb5bd;
+}
+
+.analyze-button {
+  margin-top: 2rem;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  /* CHANGED: Green gradient */
+  background: linear-gradient(90deg, #4CAF50, #45a049);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* CHANGED: Green shadow */
+  box-shadow: 0 5px 20px rgba(76, 175, 80, 0.3);
+}
+
+.analyze-button:hover:not(:disabled) {
+  transform: translateY(-3px) scale(1.03);
+  /* CHANGED: Green shadow */
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+}
+
+.analyze-button:disabled {
+  background: #a5d6a7;
+  cursor: not-allowed;
+  box-shadow: none;
+}
